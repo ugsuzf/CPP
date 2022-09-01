@@ -10,7 +10,7 @@ int playgame(int upper,int lower) {
     char ans;
     int counter = 0;
     while ((round == 0)) {
-        cout << "How about = " << guess << endl;
+        cout << "How about = " << guess <<" (b: bigger, s: smaller c: correct)" << endl;
         
         cin >> ans;
 
@@ -22,10 +22,10 @@ int playgame(int upper,int lower) {
             lower = guess;
             guess = (upper + lower) / 2;
         }
-        else if (ans== 'y')
+        else if (ans== 'c')
         {
             round = 1;
-            printf("Your number is %d", guess);
+            printf("Your number is %d \n", guess);
         } 
         counter++;
         if (counter==20)
@@ -44,7 +44,8 @@ int playgame(int upper,int lower) {
 
 	
 int main(){
- 
-    playgame(1000000,1);
+    
+    cout << "Let's play a guess game please select a number between 1 and 1000" << endl;
+    playgame(1000,1);
 
 }
