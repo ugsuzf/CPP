@@ -4,7 +4,7 @@
 
 using namespace std;
 
-int playgame(int upper,int lower) {
+int playGame(int upper,int lower) {
 	int guess = upper/4;
     int round = 0;
     char ans;
@@ -46,6 +46,6 @@ int playgame(int upper,int lower) {
 int main(){
     
     cout << "Let's play a guess game please select a number between 1 and 1000" << endl;
-    playgame(1000,1);
+    playGame(1000,1);
 
 }
